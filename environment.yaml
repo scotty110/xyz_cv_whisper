@@ -1,0 +1,17 @@
+name: hugg
+channels:
+  - pytorch
+  - defaults
+  - conda-forge
+  - nvidia
+dependencies:
+  - python=3.10
+  - pip=22.2
+  - cudatoolkit=11.7
+  - pandas=1.5
+  - pytorch=1.13
+  - matplotlib=3.5
+  - sklearn=1.1
+  - pip:
+    - datasets==2.6.1
+    - transformers==4.24.0
