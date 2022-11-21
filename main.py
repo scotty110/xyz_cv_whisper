@@ -58,13 +58,13 @@ if __name__ == '__main__':
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     sm = speech_model(device)
 
-    array_dir = '/home/squirt/Documents/code/convert_voice/cv-corpus-11.0/np_array'
+    array_dir = './cv-corpus-11.0/np_array'
     array_files = glob.glob(join(array_dir,'*.npy')) #[:12]
     df = process_dir( array_files, sm )
     df.to_csv('./processed.csv')
     
     '''
-    tsv_dir = '/home/squirt/Documents/code/convert_voice/cv-corpus-11.0/'
+    tsv_dir = './cv-corpus-11.0/'
     df = read_tsv( tsv_dir )
     print(len(df))
     '''
